@@ -316,23 +316,42 @@ const drawLeafElement = (cqmin, widthPct, heightPct, txPct, tyPct, rotateDeg, sc
     }
 
     const drawMountains = (w, h) => {
-      const horizonY = h * HORIZON_RATIO
-      ctx.save()
-      ctx.shadowColor = 'rgba(255, 43, 214, 0.6)'
-      ctx.shadowBlur = 12
-      ctx.strokeStyle = 'rgba(255, 43, 214, 0.85)'
-      ctx.lineWidth = 2
+      const horizonY = h * HORIZON_RATIO;
+      // Sun geometry
+      const cx = w * 0.5;
+      const radius = Math.min(w, h) * 0.16;
+      const leftSun = cx - radius;
+      const rightSun = cx + radius;
+      ctx.save();
+      ctx.shadowColor = 'rgba(255, 43, 214, 0.6)';
+      ctx.shadowBlur = 12;
+      ctx.strokeStyle = 'rgba(255, 43, 214, 0.85)';
+      ctx.lineWidth = 2;
+      // Peaks spanning the full width
       const peaks = [
         [0, horizonY], [w * 0.08, horizonY - 38], [w * 0.16, horizonY - 12],
         [w * 0.24, horizonY - 60], [w * 0.32, horizonY - 20], [w * 0.40, horizonY - 70],
         [w * 0.60, horizonY - 70], [w * 0.68, horizonY - 18], [w * 0.76, horizonY - 55],
         [w * 0.84, horizonY - 10], [w * 0.92, horizonY - 42], [w, horizonY],
-      ]
-      ctx.beginPath()
-      ctx.moveTo(peaks[0][0], peaks[0][1])
-      for (let i = 1; i < peaks.length; i++) ctx.lineTo(peaks[i][0], peaks[i][1])
-      ctx.stroke()
-      ctx.restore()
+      ];
+      // Split peaks into left and right of the sun
+      const leftPeaks = peaks.filter(([x, _]) => x <= leftSun);
+      const rightPeaks = peaks.filter(([x, _]) => x >= rightSun);
+      // Draw left segment
+      ctx.beginPath();
+      if (leftPeaks.length > 0) {
+        ctx.moveTo(leftPeaks[0][0], leftPeaks[0][1]);
+        for (let i = 1; i < leftPeaks.length; i++) ctx.lineTo(leftPeaks[i][0], leftPeaks[i][1]);
+        // Drop to horizon at leftSun
+        ctx.lineTo(leftSun, horizonY);
+      }
+      ctx.stroke();
+      // Draw right segment
+      ctx.beginPath();
+      ctx.moveTo(rightSun, horizonY);
+      for (let i = 0; i < rightPeaks.length; i++) ctx.lineTo(rightPeaks[i][0], rightPeaks[i][1]);
+      ctx.stroke();
+      ctx.restore();
     }
 
     const drawGrid = (w, h, now) => {

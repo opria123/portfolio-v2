@@ -178,13 +178,44 @@ export default function Terminal() {
     const [cmdHistory, setCmdHistory] = useState([])
     const [histIdx, setHistIdx] = useState(-1)
     const [open, setOpen] = useState(true)
-    const [mode, setMode] = useState('shell') // 'shell' | 'chat'
+    const [mode, setMode] = useState('chat') // Start in 'chat' mode by default
     const [busy, setBusy] = useState(false)
     const [inputBlocked, setInputBlocked] = useState(false)
     const [theme, setTheme] = useState(() => document.documentElement.getAttribute('data-theme') || 'dark')
     const chatRef = useRef(loadChat())
     const scrollRef = useRef(null)
     const inputRef = useRef(null)
+
+    // On mount, if starting in chat mode, show chat intro/history
+    useEffect(() => {
+        if (mode === 'chat') {
+            // Simulate entering chat mode as if user typed 'chat'
+            const stored = chatRef.current
+            const intro = stored.length
+                ? [`-- resuming chat (${stored.length} prior messages) -- type 'exit' to leave, 'reset' to wipe history`]
+                : [
+                    "-- chat mode -- talking to Joshua's AI clone.",
+                    "type 'exit' to leave, 'reset' to wipe history.",
+                ]
+            setHistory((h) => {
+                // Only add intro if not already present
+                if (h.length > 1 || (h[1] && h[1].type === 'sys')) return h;
+                let newHistory = [h[0], ...intro.map((t) => ({ type: 'sys', text: t }))];
+                // replay last few turns so user sees continuity
+                if (stored.length) {
+                    const recent = stored.slice(-6)
+                    newHistory = [
+                        ...newHistory,
+                        ...recent.map((m) => ({
+                            type: m.role === 'user' ? 'chat-user' : 'chat-ai',
+                            text: (m.role === 'user' ? '› ' : 'ai: ') + m.content,
+                        }))
+                    ]
+                }
+                return newHistory;
+            });
+        }
+    }, []);
 
     const append = (lines) => setHistory((h) => [...h, ...lines])
     const appendLine = (type, text) => append([{ type, text }])

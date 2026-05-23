@@ -251,11 +251,9 @@ a.btn-action {
 
 /* ---------- Profile badge / Left dock ---------- */
 #profile-badge.profile-badge {
-    background: rgba(10, 4, 32, 0.72) !important;
-    border: 1px solid rgba(255, 43, 214, 0.35) !important;
-    box-shadow:
-        0 0 0 1px rgba(0, 240, 255, 0.12) inset,
-        0 14px 50px rgba(255, 43, 214, 0.25);
+    background: rgba(20, 24, 32, 0.7) !important;
+    border: 1px solid rgba(0, 240, 255, 0.3) !important;
+    box-shadow: 0 14px 50px rgba(0, 240, 255, 0.2);
 }
 
 .profile-avatar {

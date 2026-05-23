@@ -49,6 +49,13 @@ const ICONS = {
   car: <path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11m-14 0h14m-14 0a2 2 0 00-2 2v3h2a2 2 0 004 0h6a2 2 0 004 0h2v-3a2 2 0 00-2-2M7.5 8h9" />,
   drums: <path d="M12 3c4.97 0 9 1.57 9 3.5S16.97 10 12 10 3 8.43 3 6.5 7.03 3 12 3zm-9 3.5V17c0 1.93 4.03 3.5 9 3.5s9-1.57 9-3.5V6.5M8 11v9M16 11v9" />,
   gamepad: <path d="M6 8h12a4 4 0 014 4v2a3 3 0 01-5.5 1.6L15 14H9l-1.5 1.6A3 3 0 012 14v-2a4 4 0 014-4zm2 3v3m-1.5-1.5h3M16 12h.01M14 14h.01M18 14h.01M16 16h.01" />,
+  menu: (
+    <>
+      <rect x="4" y="7" width="16" height="2" rx="1" />
+      <rect x="4" y="11" width="16" height="2" rx="1" />
+      <rect x="4" y="15" width="16" height="2" rx="1" />
+    </>
+  ),
 }
 
 export default function Icon({ id, size = 24, className = '', strokeWidth = 1.8, stroke = 'currentColor', fill = 'none' }) {

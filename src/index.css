@@ -641,7 +641,7 @@ main.main-content {
 /* ===== Left dock (profile badge) ===== */
 #profile-badge.profile-badge {
     position: fixed;
-    top: 20px;
+    top: 24px;
     left: 20px;
     z-index: 1000;
     background: rgba(20, 24, 32, 0.7);
@@ -654,12 +654,24 @@ main.main-content {
     gap: 0.5rem;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     width: 70px;
+    /* Default width */
     transition: width 0.35s ease;
     overflow: hidden;
 }
 
 #profile-badge.profile-badge:hover {
     width: 280px;
+}
+
+/* Collapsed state for profile badge */
+#profile-badge.profile-badge.collapsed {
+    width: 70px;
+}
+
+@media (max-width: 600px) {
+    #profile-badge.profile-badge.collapsed {
+        width: 70px;
+    }
 }
 
 .profile-badge-header {
@@ -684,14 +696,15 @@ main.main-content {
     object-fit: cover;
 }
 
+
 .profile-info {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.25s ease 0.05s;
     white-space: nowrap;
 }
 
-#profile-badge.profile-badge:hover .profile-info {
-    opacity: 1;
+#profile-badge.profile-badge.collapsed .profile-info {
+    opacity: 0 !important;
 }
 
 .profile-name {
@@ -1164,18 +1177,43 @@ main.main-content {
 
 /* Hide left dock label on small screens */
 @media (max-width: 600px) {
+
+    /* Base container tracking */
     #profile-badge.profile-badge {
-        width: 60px;
+        position: fixed;
+        left: 20px;
+        top: 24px;
+        width: 70px;
         padding: 0.5rem;
+        transition: width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+        z-index: 1000;
     }
 
-    #profile-badge.profile-badge:hover {
-        width: 220px;
+    /* Hovering or state expansion opens it to full layout */
+    #profile-badge.profile-badge:hover,
+    #profile-badge.profile-badge.expanded {
+        width: 70px;
     }
 
-    .modal-progress-section {
-        display: none;
+    /* Scrolled down collapsed rule locks it narrow */
+    #profile-badge.profile-badge.collapsed {
+        width: 70px;
     }
+
+    #profile-badge.profile-badge.collapsed:hover {
+        width: 70px;
+    }
+
+    /* Safety for the profile text layout */
+    .profile-name {
+        display: inline-block !important;
+        white-space: nowrap;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+
 }
 
 

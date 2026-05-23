@@ -1,0 +1,12 @@
+name = "opria-portfolio-ai"
+main = "src/index.js"
+compatibility_date = "2026-05-20"
+
+# Workers AI binding (Llama 3.1 etc.)
+[ai]
+binding = "AI"
+
+[vars]
+# Comma-separated list of origins allowed to call this worker.
+# Add your local dev URL and your GitHub Pages URL.
+ALLOWED_ORIGIN = "http://localhost:5173,https://<your-username>.github.io"

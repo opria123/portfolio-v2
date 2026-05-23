@@ -1,0 +1,691 @@
+{
+  "PROFILE": {
+    "greeting": "Hello, I'm",
+    "firstName": "Joshua",
+    "titleWords": ["Full-Stack", "+", "AI/ML", "Engineer"],
+    "titleRotations": ["Full-Stack Engineer", "AI/ML Engineer"],
+    "description": "Senior Software Engineer focused on AI/ML systems, distributed architectures, and open-source. arXiv author (STRUM) and maintainer of Octave; I lead projects, mentor engineers, and care about system design, evaluation, and the long-term health of what I build.",
+    "anecdotes": [
+      "I've always had a passion for video games and originally wanted to develop them, which led me to discover a love for technology in general.",
+      "My journey through school and past roles has taken me from game prototypes to building distributed AI systems and mentoring engineers.",
+      "I'm a lifelong gamer, a drummer, and a car enthusiast—if I'm not coding, you might find me behind a drum kit or at a car meet."
+    ],
+    "email": "opriaj@gmail.com",
+    "cvUrl": "joshua-opria-resume.pdf",
+    "profileImage": "joshua.jpg",
+    "stats": [
+      { "value": "7+", "label": "years engineering", "numeric": 7, "max": 10, "unit": "YRS", "gauge": "speedo" },
+      { "value": "16+", "label": "engineers mentored", "numeric": 16, "max": 20, "unit": "MENTEES", "gauge": "rpm" },
+      { "value": "3", "label": "shipped products", "numeric": 3, "max": 5, "unit": "BUILDS", "gauge": "speedo" },
+      { "value": "8", "label": "certs & degrees", "numeric": 8, "max": 10, "unit": "CREDS", "gauge": "rpm" }
+    ]
+  },
+
+  "PROJECT_CATEGORIES": [
+    { "id": "ai-ml", "label": "AI / ML", "icon": "brain", "description": "Applied machine learning, audio intelligence, and end-to-end ML pipelines." },
+    { "id": "apps-tools", "label": "Apps & Tools", "icon": "hammer", "description": "Desktop apps, developer tools, and full-stack products shipped end-to-end." },
+    { "id": "open-source", "label": "Open Source", "icon": "globe", "description": "Contributions to open-source projects and community tooling." }
+  ],
+
+  "PROJECTS": [
+    {
+      "title": "STRUM",
+      "subtitle": "Audio-to-Chart ML Pipeline",
+      "description": "End-to-end multi-instrument pipeline that converts raw audio into playable Clone Hero / YARG charts for drums, guitar, bass, vocals, and keys — without oracle metadata. Two-stage CRNN drum transcriber + 6-model ensemble lane classifier, 93.9% onset F1 and 85.2% lane F1 on 3,299 community-authored charts.",
+      "image": "/projects/strum.png",
+      "url": "https://arxiv.org/abs/2605.12135",
+      "category": "ai-ml",
+      "technologies": ["Python", "PyTorch", "Hugging Face", "Demucs", "Whisper", "librosa", "Hydra", "W&B", "CUDA", "Evaluation & A/B Testing"],
+      "softSkills": ["Problem Solving", "Continuous Learning", "Ownership"],
+      "status": "completed",
+      "links": [
+        { "label": "Paper (arXiv)", "url": "https://arxiv.org/abs/2605.12135" },
+        { "label": "GitHub", "url": "https://github.com/opria123/strum" }
+      ]
+    },
+    {
+      "title": "OCTAVE",
+      "subtitle": "Desktop Chart Editor & Auto-Charter",
+      "description": "Cross-platform desktop app (Windows / macOS / Linux) that wraps STRUM in a one-click \"audio to playable chart\" workflow with a 2D piano-roll editor and live 3D highway preview. Bundles a self-contained Python runtime, PyTorch, Demucs, and Whisper inside the Electron app — 100% local inference. 98 releases shipped.",
+      "image": "/projects/octave.png",
+      "url": "https://octavestudio.tools",
+      "category": "apps-tools",
+      "technologies": ["Electron", "React 19", "TypeScript", "Three.js", "Zustand", "Python", "PyTorch", "Desktop Apps"],
+      "softSkills": ["Problem Solving", "Ownership", "Continuous Learning"],
+      "status": "in-progress",
+      "links": [
+        { "label": "Website", "url": "https://octavestudio.tools" },
+        { "label": "GitHub", "url": "https://github.com/opria123/octave" }
+      ]
+    },
+    {
+      "title": "YARG Online Multiplayer",
+      "subtitle": "Networking layer for an open-source rhythm game",
+      "description": "Designed and built the first online multiplayer implementation for YARG (1k+ stars, 80+ contributors). LiteNetLib transport with NAT punch-through and relay-server fallback so peers behind restrictive routers can connect without manual port forwarding. Dockerized dedicated server deployed via docker-compose and Fly.io with a GitHub Actions CI pipeline.",
+      "image": "/projects/yarg.png",
+      "url": "https://github.com/opria123/YARG.Networking",
+      "category": "open-source",
+      "technologies": ["C#", ".NET 8", "Unity", "LiteNetLib", "Docker", "Fly.io", "GitHub Actions", "Real-Time Systems", "Distributed Systems", "CI/CD"],
+      "softSkills": ["Problem Solving", "Ownership", "Teamwork"],
+      "status": "in-progress",
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/opria123/YARG.Networking" },
+        { "label": "YARG (upstream)", "url": "https://github.com/YARC-Official/YARG" }
+      ]
+    },
+    {
+      "title": "Turtle Recognition",
+      "subtitle": "Computer Vision for the Toledo Zoo",
+      "description": "Built a turtle individual-identification system for the Toledo Zoo to track endangered Blanding's turtles in the wild. Trained a CNN over a curated dataset of plastron (shell-underside) photos to identify individual turtles from new field photos, enabling non-invasive longitudinal tracking for the Zoo's conservation program.",
+      "image": "/projects/turtle.svg",
+      "imageFit": "contain",
+      "url": "https://github.com/opria123/turtle-recognition",
+      "category": "ai-ml",
+      "technologies": ["Python", "PyTorch", "Computer Vision", "CNN", "Transfer Learning", "OpenCV"],
+      "softSkills": ["Problem Solving", "Ownership", "Teamwork"],
+      "status": "completed",
+      "links": [
+        { "label": "Toledo Zoo", "url": "https://www.toledozoo.org/" }
+      ]
+    },
+    {
+      "title": "2D Action Platformer",
+      "subtitle": "Unreal Engine 5 prototype",
+      "description": "Side-scrolling action platformer prototype built in Unreal Engine 5 with custom 2D character movement, attack combos, and enemy AI. Exploration project for learning UE5's Paper2D / Paper ZD workflow, gameplay-ability system, and Blueprint-to-C++ patterns.",
+      "image": "/projects/platformer.jpg",
+      "url": "https://github.com/opria123/2D-action-platformer",
+      "category": "apps-tools",
+      "technologies": ["Unreal Engine 5", "C++", "Blueprints", "Paper2D", "Game Development"],
+      "softSkills": ["Continuous Learning", "Problem Solving"],
+      "status": "completed",
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/opria123/2D-action-platformer" }
+      ]
+    },
+    {
+      "title": "Bot-Cleaner",
+      "subtitle": "Discord moderation bot",
+      "description": "Discord bot that automatically detects and removes spam / bot accounts from servers using heuristic and rate-based signals. Slash-command driven, configurable per-guild, and deployable as a long-running Node service.",
+      "image": "/projects/bot-cleaner.png",
+      "url": "https://github.com/opria123/Bot-Cleaner",
+      "category": "apps-tools",
+      "technologies": ["Node.js", "JavaScript", "discord.js", "Bots"],
+      "softSkills": ["Ownership", "Problem Solving"],
+      "status": "completed",
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/opria123/Bot-Cleaner" }
+      ]
+    }
+  ],
+
+  "EXPERIENCES": [
+    {
+      "id": "covermymeds",
+      "jobTitle": "Software Engineer II",
+      "company": "CoverMyMeds",
+      "logo": "/logos/covermymeds.svg",
+      "period": "May 2022 – Present",
+      "duration": "4 years",
+      "type": "Full-time",
+      "location": "Columbus, OH",
+      "status": "current",
+      "description": "Architecting LLM-powered document intelligence pipelines and distributed event-driven systems. Leading engineers and shaping the architectural direction of internal AI systems.",
+      "projects": [],
+      "technicalSkills": ["Python", "Elixir", "Node.js", "React", "Remix", "Azure", "Azure Functions", "Azure Service Bus", "Kafka", "Pydantic", "OCR", "LLMs", "Redis", "Terraform", "GitHub Actions", "DataDog", "LLM Pipelines", "Document Intelligence", "RAG", "Event-Driven Architecture", "Distributed Systems", "System Design", "API Design", "Cloud Infrastructure", "Evaluation & A/B Testing", "CI/CD"],
+      "softSkills": ["Technical Leadership", "Mentorship", "System Design", "Communication", "Problem Solving", "Ownership"],
+      "bullets": [
+        "Architected LLM-powered IDP pipelines (OCR, Azure AI, Pydantic) for prior-authorization workflows \u2014 template-free extraction from PDFs, EHR forms, and clinical documents.",
+        "Architected a distributed Elixir + Azure Service Bus + Kafka event-driven platform improving sponsorship accuracy by 50% (+$7.8M annual revenue).",
+        "Architected a rules engine executing against 1M+ requests/day using Redis and the Rete algorithm.",
+        "Designed and implemented a Node.js experimentation platform with feature toggling, logging, and custom user filtering.",
+        "Designed an enterprise-wide system-architecture change supporting a core data model migration; led the innovation day that originated it.",
+        "Stood up a SOX-compliant Azure Functions platform with Terraform + reusable GitHub Actions workflows and dynamic per-PR test environments (Functions, Blob Storage, VNets, Service Bus).",
+        "Rewrote a legacy PHP web application in React using the Remix framework.",
+        "Led development of APIs handling 5K+ req/min and frontend systems serving 140K+ req/min.",
+        "Delivered an internal talk on AI Agents & AI Factories, shaping the architectural direction of internal AI systems.",
+        "Mentored 7+ engineers on system design, cloud best practices, and career growth."
+      ],
+      "crossSkills": [
+        { "label": "Applied ML", "icon": "brain" },
+        { "label": "System Design", "icon": "layers" },
+        { "label": "Evaluation", "icon": "bar-chart" },
+        { "label": "Event-Driven Architecture", "icon": "plug" },
+        { "label": "Mentorship", "icon": "users" },
+        { "label": "Technical Leadership", "icon": "message" }
+      ]
+    },
+    {
+      "id": "nationwide-tech-lead",
+      "jobTitle": "Technical Lead",
+      "company": "Nationwide Insurance",
+      "logo": "https://www.google.com/s2/favicons?domain=nationwide.com&sz=128",
+      "period": "Dec 2020 – May 2022",
+      "duration": "1 year 6 months",
+      "type": "Full-time",
+      "location": "Columbus, OH",
+      "status": "completed",
+      "description": "Led API architecture and team development across multiple data domains, partnering directly with business stakeholders.",
+      "projects": [],
+      "technicalSkills": ["AWS AppSync", "GraphQL", "Java", "Spring Boot", "AWS", "Adobe Target", "Microservices", "API Design", "Distributed Systems", "Cloud Infrastructure", "Evaluation & A/B Testing", "System Design"],
+      "softSkills": ["Technical Leadership", "Mentorship", "Communication", "Ownership", "Teamwork"],
+      "bullets": [
+        "Stood up a GraphQL API using AWS AppSync to consolidate API calls and obscure sensitive data; reduced response times by 15%.",
+        "Designed architecture models for multiple microservices, including a serverless microservice.",
+        "Architected and ran digital A/B experiments across multiple large applications using Adobe Target, working directly with business partners to drive the rate experiments were kept in production.",
+        "Mentored and trained 9 engineers on cloud, best practices, languages, and architectural design; cross-trained developers and testers to remove silos.",
+        "Led planning sessions to scope future team initiatives and aligned architecture with measurable business outcomes."
+      ],
+      "crossSkills": [
+        { "label": "Technical Leadership", "icon": "crown" },
+        { "label": "Mentorship", "icon": "users" },
+        { "label": "GraphQL", "icon": "plug" },
+        { "label": "Stakeholder Communication", "icon": "message" }
+      ]
+    },
+    {
+      "id": "nationwide-senior",
+      "jobTitle": "Senior Software Engineer",
+      "company": "Nationwide Insurance",
+      "logo": "https://www.google.com/s2/favicons?domain=nationwide.com&sz=128",
+      "period": "Mar 2020 – Dec 2020",
+      "duration": "10 months",
+      "type": "Full-time",
+      "location": "Columbus, OH",
+      "status": "completed",
+      "description": "Owned high-throughput API delivery and CI/CD pipeline design.",
+      "projects": [],
+      "technicalSkills": ["Angular", "AWS S3", "Contentful", "CI/CD", "Spring Boot", "Java", "Node.js", "Concourse", "Jenkins", "API Design", "Cloud Infrastructure", "Distributed Systems"],
+      "softSkills": ["Mentorship", "Communication", "Teamwork", "Ownership", "Problem Solving"],
+      "bullets": [
+        "Designed and implemented document storage in AWS S3 for an Angular site.",
+        "Led the team's shift to a DevOps model by designing fully automated CI/CD pipelines with monitoring and reporting.",
+        "Designed and implemented APIs handling 100,000+ calls per hour; delivered a custom Node.js OAS validator improving API quality by 70%.",
+        "Built a dynamic Angular site backed by Contentful as the content-management service.",
+        "Did live demonstrations for multiple teams on how to design and build CI/CD pipelines."
+      ],
+      "crossSkills": [
+        { "label": "CI/CD", "icon": "rocket" },
+        { "label": "API Design", "icon": "layers" },
+        { "label": "High-Throughput Systems", "icon": "zap" }
+      ]
+    },
+    {
+      "id": "nationwide-engineer",
+      "jobTitle": "Software Engineer",
+      "company": "Nationwide Insurance",
+      "logo": "https://www.google.com/s2/favicons?domain=nationwide.com&sz=128",
+      "period": "Jun 2019 – Mar 2020",
+      "duration": "10 months",
+      "type": "Full-time",
+      "location": "Columbus, OH",
+      "status": "completed",
+      "description": "Built internal developer tooling for API governance.",
+      "projects": [],
+      "technicalSkills": ["Java", "Angular 8", "Docker", "Kubernetes", "Concourse", "Jenkins", "Ruby", "Python", "Node.js", "AWS RDS", "PostgreSQL", "Liquibase", "SQL", "CI/CD"],
+      "softSkills": ["Teamwork", "Problem Solving", "Continuous Learning"],
+      "bullets": [
+        "Wrote Java back-end services for business logic and database connections in an agile/Scrum team; used Angular 8 on the front end.",
+        "Containerized applications with Docker and deployed them across Kubernetes clusters.",
+        "Stood up CI/CD pipelines with Concourse and Jenkins plus a Ruby automated test suite for APIs.",
+        "Wrote Python and Node.js scripts to transfer data during an application rewrite.",
+        "Stood up an AWS RDS Postgres database using Liquibase for schema migrations.",
+        "Created an internal Angular SPA for 200+ APIs supporting developer access control."
+      ],
+      "crossSkills": [
+        { "label": "Developer Tooling", "icon": "wrench" },
+        { "label": "Frontend", "icon": "palette" }
+      ]
+    },
+    {
+      "id": "nationwide-contractor",
+      "jobTitle": "Software Developer Contractor",
+      "company": "Nationwide Insurance",
+      "logo": "https://www.google.com/s2/favicons?domain=nationwide.com&sz=128",
+      "period": "Dec 2018 – Jun 2019",
+      "duration": "7 months",
+      "type": "Contract",
+      "location": "Columbus, OH",
+      "status": "completed",
+      "description": "Built developer-facing tooling and authentication infrastructure.",
+      "projects": [],
+      "technicalSkills": ["Angular", "Apigee", "Java", "Spring Boot", "Docker", "Kubernetes", "AWS", "Concourse", "API Design", "CI/CD"],
+      "softSkills": ["Teamwork", "Problem Solving", "Continuous Learning"],
+      "bullets": [
+        "Worked on the agile team responsible for Nationwide's developer portal.",
+        "Created and maintained enterprise-level APIs in Apigee and stood up CRUD endpoints in Java Spring Boot.",
+        "Containerized multiple apps with Docker and hosted them on AWS Kubernetes.",
+        "Built automated deployment pipelines in Concourse so the team could ship more frequently.",
+        "Built 7 Apigee services for auth workflows with automated Concourse deployments."
+      ],
+      "crossSkills": [
+        { "label": "Auth & Identity", "icon": "shield" },
+        { "label": "CI/CD", "icon": "rocket" }
+      ]
+    },
+    {
+      "id": "scenicio",
+      "jobTitle": "Software Developer",
+      "company": "Scenicio",
+      "logo": "/logos/senecio.jpg",
+      "period": "Aug 2018 – Dec 2018",
+      "duration": "5 months",
+      "type": "Contract",
+      "location": "Bowling Green, OH",
+      "status": "completed",
+      "description": "Built an AR mobile app integrating real-world data from government APIs.",
+      "projects": [],
+      "technicalSkills": ["Android", "iOS", "AR", "Kotlin", "JavaScript", "Chart.js"],
+      "softSkills": ["Problem Solving", "Teamwork", "Continuous Learning"],
+      "bullets": [
+        "Built \"Public Places\" — an Android/iOS AR app that uses augmented reality to help users find the nearest public place (hospital, airport, fire department, school, etc.).",
+        "Created a companion JavaScript site using Chart.js to surface usage and track user data for the Public Places app."
+      ],
+      "crossSkills": [
+        { "label": "Mobile Development", "icon": "smartphone" },
+        { "label": "API Integration", "icon": "globe" }
+      ]
+    },
+    {
+      "id": "nationwide-intern",
+      "jobTitle": "Software Developer Intern",
+      "company": "Nationwide Insurance",
+      "logo": "https://www.google.com/s2/favicons?domain=nationwide.com&sz=128",
+      "period": "Jun 2018 – Aug 2018",
+      "duration": "3 months",
+      "type": "Internship",
+      "location": "Columbus, OH",
+      "status": "completed",
+      "description": "First exposure to production cloud infrastructure.",
+      "projects": [],
+      "technicalSkills": ["Java", "Spring Boot", "Docker", "Kubernetes", "AWS", "Concourse", "CI/CD", "Cloud Infrastructure"],
+      "softSkills": ["Continuous Learning", "Teamwork", "Communication"],
+      "bullets": [
+        "Joined the agile team responsible for Nationwide's developer portal as a summer intern.",
+        "Shadowed senior engineers and shipped first production code into Java Spring Boot services running on AWS.",
+        "Learned the team's CI/CD and container workflow (Concourse, Docker, Kubernetes) and contributed small pipeline improvements."
+      ],
+      "crossSkills": [
+        { "label": "Cloud", "icon": "cloud" },
+        { "label": "Containers", "icon": "boxes" }
+      ]
+    }
+  ],
+
+  "SKILLS": {
+    "programmingLanguages": [
+      { "key": "Python", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+      { "key": "TypeScript", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { "key": "Java", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+      { "key": "Elixir", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg" },
+      { "key": "C#", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+      { "key": "C++", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+      { "key": "SQL", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { "key": "Ruby", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" }
+    ],
+    "frameworksEngines": [
+      { "key": "PyTorch", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+      { "key": "Hugging Face", "icon": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg" },
+      { "key": "React", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { "key": "Node.js", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { "key": "Spring Boot", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+      { "key": "Electron", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" },
+      { "key": "Three.js", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg" },
+      { "key": "Kafka", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" },
+      { "key": "Docker", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+      { "key": "Kubernetes", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+      { "key": "Terraform", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
+      { "key": "AWS", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
+      { "key": "Azure", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+      { "key": "TensorFlow", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+      { "key": "LangChain", "icon": "link-2" },
+      { "key": "Unreal Engine", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg" },
+      { "key": "ML-Agents", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" }
+    ],
+    "specialties": [
+      { "key": "LLM Pipelines", "icon": "brain", "description": "Production LLM systems" },
+      { "key": "Document Intelligence", "icon": "file-text", "description": "IDP, OCR, extraction" },
+      { "key": "RAG", "icon": "search", "description": "Retrieval-augmented gen" },
+      { "key": "Event-Driven Architecture", "icon": "plug", "description": "Kafka, Service Bus" },
+      { "key": "Distributed Systems", "icon": "network", "description": "High-scale services" },
+      { "key": "API Design", "icon": "link", "description": "REST & GraphQL" },
+      { "key": "System Design", "icon": "layers", "description": "Architecture & patterns" },
+      { "key": "CI/CD", "icon": "rocket", "description": "GitHub Actions, Jenkins, Concourse" },
+      { "key": "Evaluation & A/B Testing", "icon": "bar-chart", "description": "Experimentation" },
+      { "key": "Cloud Infrastructure", "icon": "cloud", "description": "AWS & Azure" },
+      { "key": "Desktop Apps", "icon": "monitor", "description": "Electron, cross-platform" },
+      { "key": "Real-Time Systems", "icon": "zap", "description": "Audio, networking" },
+      { "key": "OpenUSD", "icon": "globe", "description": "3D data pipelines" },
+      { "key": "Physical Simulation", "icon": "flask", "description": "Physics for AI / robotics" },
+      { "key": "Omniverse", "icon": "satellite", "description": "NVIDIA Omniverse workflows" },
+      { "key": "Computer Vision", "icon": "eye", "description": "Vision models & pipelines" },
+      { "key": "NLP", "icon": "message-square", "description": "Natural language processing" },
+      { "key": "Deep Learning", "icon": "network", "description": "Neural network architectures" },
+      { "key": "Reinforcement Learning", "icon": "target", "description": "Agents & policy learning" },
+      { "key": "Fine-tuning", "icon": "sliders", "description": "Adapting foundation models" },
+      { "key": "Game Dev", "icon": "gamepad-2", "description": "Game programming" },
+      { "key": "MCP", "icon": "plug", "description": "Model Context Protocol" },
+      { "key": "Agents", "icon": "bot", "description": "Autonomous LLM agents" },
+      { "key": "GPU Computing", "icon": "cpu", "description": "CUDA & parallel compute" }
+    ],
+    "softSkills": [
+      { "key": "Technical Leadership", "icon": "crown", "description": "Leading projects" },
+      { "key": "Mentorship", "icon": "users", "description": "16+ engineers mentored" },
+      { "key": "System Design", "icon": "layers", "description": "Architecture" },
+      { "key": "Communication", "icon": "message", "description": "Talks & docs" },
+      { "key": "Problem Solving", "icon": "search", "description": "Debug & root-cause" },
+      { "key": "Continuous Learning", "icon": "book", "description": "Constant learner" },
+      { "key": "Teamwork", "icon": "handshake", "description": "Cross-team collaboration" },
+      { "key": "Ownership", "icon": "target", "description": "End-to-end delivery" }
+    ]
+  },
+
+  "EDUCATION": [
+    {
+      "title": "M.Sc. Computer Science — Artificial Intelligence & Machine Learning",
+      "institution": "Western Governors University (WGU)",
+      "city": "Online",
+      "period": "Oct 2025",
+      "status": "Obtained",
+      "statusClass": "success",
+      "color": "#7c3aed",
+      "logo": "https://www.google.com/s2/favicons?domain=wgu.edu&sz=128",
+      "description": "Graduate program focused on machine learning, deep learning, and applied AI systems.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "technicalSkills": ["PyTorch", "TensorFlow", "NLP", "Deep Learning", "ML Systems", "LLM Pipelines", "RAG", "Hugging Face", "Evaluation & A/B Testing"],
+      "softSkills": ["Continuous Learning", "Problem Solving", "Ownership"],
+      "crossSkills": [
+        { "label": "Applied ML", "icon": "brain" },
+        { "label": "Evaluation", "icon": "bar-chart" },
+        { "label": "Continuous Learning", "icon": "book" }
+      ]
+    },
+    {
+      "title": "B.Sc. Computer Science",
+      "institution": "Bowling Green State University",
+      "city": "Bowling Green, OH",
+      "period": "Aug 2017 – May 2019",
+      "status": "Obtained",
+      "statusClass": "success",
+      "color": "#f59e0b",
+      "logo": "https://icons.duckduckgo.com/ip3/bgsu.edu.ico",
+      "description": "Undergraduate degree in computer science — foundations across systems, algorithms, and software engineering.",
+      "years": [
+        { "year": 1, "status": "validated", "label": "Validated" },
+        { "year": 2, "status": "validated", "label": "Validated" }
+      ],
+      "technicalSkills": ["Java", "C++", "Algorithms", "Data Structures"],
+      "softSkills": ["Problem Solving", "Teamwork", "Continuous Learning"],
+      "crossSkills": [
+        { "label": "Problem Solving", "icon": "target" },
+        { "label": "Teamwork", "icon": "handshake" }
+      ]
+    },
+    {
+      "title": "AWS Certified Machine Learning — Specialty",
+      "institution": "Amazon Web Services",
+      "city": "",
+      "period": "Sep 2025",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#ff9900",
+      "logo": "https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=128",
+      "description": "Industry certification in designing, building, and deploying ML solutions on AWS.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "crossSkills": [
+        { "label": "Applied ML", "icon": "brain" },
+        { "label": "Cloud", "icon": "cloud" }
+      ]
+    },
+    {
+      "title": "Fundamentals of Accelerated Computing with Modern CUDA C++",
+      "institution": "NVIDIA",
+      "city": "",
+      "period": "Mar 2025",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#76b900",
+      "logo": "https://www.google.com/s2/favicons?domain=nvidia.com&sz=128",
+      "description": "GPU programming and accelerated computing with modern CUDA C++.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "crossSkills": [
+        { "label": "GPU Computing", "icon": "zap" }
+      ]
+    },
+    {
+      "title": "Azure AI Fundamentals",
+      "institution": "Microsoft",
+      "city": "",
+      "period": "Mar 2024",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#0078d4",
+      "logo": "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128",
+      "description": "Foundational certification covering AI workloads and services on Microsoft Azure.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "crossSkills": [
+        { "label": "Applied ML", "icon": "brain" },
+        { "label": "Cloud", "icon": "cloud" }
+      ]
+    },
+    {
+      "title": "OpenUSD Crash Course — Build 3D Data Pipelines for Physical AI",
+      "institution": "NVIDIA",
+      "city": "",
+      "period": "2025",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#76b900",
+      "logo": "https://www.google.com/s2/favicons?domain=nvidia.com&sz=128",
+      "description": "OpenUSD scene graphs, layering, and data pipelines for Physical AI and Omniverse workflows.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "crossSkills": [
+        { "label": "OpenUSD", "icon": "globe" },
+        { "label": "Physical Simulation", "icon": "flask" },
+        { "label": "Omniverse", "icon": "satellite" }
+      ]
+    },
+    {
+      "title": "MCP Course Unit 3 — Automation in Production",
+      "institution": "Hugging Face",
+      "city": "",
+      "period": "2025",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#ffcc4d",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+      "description": "Model Context Protocol fundamentals and production automation patterns for AI agents.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "crossSkills": [
+        { "label": "Agents", "icon": "bot" },
+        { "label": "MCP", "icon": "plug" }
+      ]
+    },
+    {
+      "title": "Make a 2D Action Platformer in Unreal Engine 5",
+      "institution": "Udemy",
+      "city": "",
+      "period": "2024",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#0e1128",
+      "logo": "https://icons.duckduckgo.com/ip3/udemy.com.ico",
+      "description": "Gameplay programming and engine workflows in Unreal Engine 5.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "crossSkills": [
+        { "label": "Game Dev", "icon": "gamepad-2" },
+        { "label": "Unreal Engine", "icon": "wand" }
+      ]
+    },
+    {
+      "title": "AI Agents Course",
+      "institution": "Hugging Face",
+      "city": "",
+      "period": "2025",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#ffcc4d",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+      "description": "End-to-end course on building production AI agents: tool use, planning, multi-step reasoning, and orchestration.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "technicalSkills": ["LLM Pipelines", "RAG", "Hugging Face"],
+      "crossSkills": [
+        { "label": "Agents", "icon": "bot" },
+        { "label": "LLM Pipelines", "icon": "brain" }
+      ]
+    },
+    {
+      "title": "LLM Course",
+      "institution": "Hugging Face",
+      "city": "",
+      "period": "2025",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#ffcc4d",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+      "description": "Transformer architectures, fine-tuning, evaluation, and deployment of large language models with the Hugging Face ecosystem.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "technicalSkills": ["LLM Pipelines", "Hugging Face", "PyTorch", "Evaluation & A/B Testing"],
+      "crossSkills": [
+        { "label": "LLMs", "icon": "brain" },
+        { "label": "Fine-tuning", "icon": "wand" }
+      ]
+    },
+    {
+      "title": "NLP Course",
+      "institution": "Hugging Face",
+      "city": "",
+      "period": "2024",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#ffcc4d",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+      "description": "Natural language processing with Transformers — tokenization, fine-tuning, datasets, and the full HF pipeline.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "technicalSkills": ["Hugging Face", "PyTorch", "NLP"],
+      "crossSkills": [
+        { "label": "NLP", "icon": "message" }
+      ]
+    },
+    {
+      "title": "Deep Reinforcement Learning Course",
+      "institution": "Hugging Face",
+      "city": "",
+      "period": "2024",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#ffcc4d",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+      "description": "Theory and practice of deep RL — policy gradients, PPO, SAC, and training agents in classic and procedurally generated environments.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "technicalSkills": ["PyTorch", "Hugging Face"],
+      "crossSkills": [
+        { "label": "Reinforcement Learning", "icon": "zap" }
+      ]
+    },
+    {
+      "title": "ML for Games Course",
+      "institution": "Hugging Face",
+      "city": "",
+      "period": "2024",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#ffcc4d",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+      "description": "Applying machine learning and RL inside Unity ML-Agents to ship intelligent behaviors in games.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "technicalSkills": ["Hugging Face", "C#"],
+      "crossSkills": [
+        { "label": "Game Dev", "icon": "gamepad-2" },
+        { "label": "ML-Agents", "icon": "bot" }
+      ]
+    },
+    {
+      "title": "Audio Course",
+      "institution": "Hugging Face",
+      "city": "",
+      "period": "2024",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#ffcc4d",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+      "description": "Audio ML fundamentals — ASR, TTS, audio classification, and Whisper-based pipelines.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "technicalSkills": ["Hugging Face", "PyTorch", "Real-Time Systems"],
+      "crossSkills": [
+        { "label": "Audio ML", "icon": "zap" }
+      ]
+    },
+    {
+      "title": "Computer Vision Course",
+      "institution": "Hugging Face",
+      "city": "",
+      "period": "2024",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#ffcc4d",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+      "description": "Modern computer vision with vision transformers, detection, segmentation, and multimodal pipelines.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "technicalSkills": ["Hugging Face", "PyTorch"],
+      "crossSkills": [
+        { "label": "Computer Vision", "icon": "monitor" }
+      ]
+    },
+    {
+      "title": "LangChain for LLM Application Development",
+      "institution": "Udemy",
+      "city": "",
+      "period": "2024",
+      "status": "Certified",
+      "statusClass": "success",
+      "color": "#0bc5ea",
+      "logo": "https://icons.duckduckgo.com/ip3/udemy.com.ico",
+      "description": "Building production LLM applications with LangChain — prompts, chains, memory, retrieval, and agents.",
+      "years": [{ "year": 1, "status": "validated", "label": "Validated" }],
+      "technicalSkills": ["LLM Pipelines", "RAG", "API Design"],
+      "crossSkills": [
+        { "label": "LangChain", "icon": "link" },
+        { "label": "Agents", "icon": "bot" }
+      ]
+    }
+  ],
+
+  "POSTS": [
+    {
+      "title": "STRUM: Stem-aware Transcription for Rhythm-game-aligned Universal Music",
+      "excerpt": "End-to-end multi-instrument pipeline that converts raw audio into playable Clone Hero / YARG charts without oracle metadata. Two-stage CRNN drum transcriber plus a 6-model ensemble lane classifier; 93.9% onset F1 and 85.2% lane F1 on 3,299 community-authored charts.",
+      "category": "Paper",
+      "readTime": "arXiv",
+      "date": "2026",
+      "image": "",
+      "url": "https://arxiv.org/abs/2605.12135",
+      "external": true
+    }
+  ],
+
+  "SOCIALS": [
+    { "id": "linkedin", "title": "LinkedIn", "url": "https://www.linkedin.com/in/joshua-opria/", "icon": "linkedin", "external": true },
+    { "id": "github", "title": "GitHub", "url": "https://github.com/opria123", "icon": "github", "external": true }
+  ],
+
+  "TROPHIES": [
+    { "id": "welcome", "name": "Welcome!", "description": "Visit the homepage for the first time.", "icon": "home", "rarity": "common" },
+    { "id": "portfolio_explorer", "name": "Portfolio Explorer", "description": "Discover the projects section.", "icon": "briefcase", "rarity": "common" },
+    { "id": "experience_reader", "name": "Career Reader", "description": "Read about my professional experience.", "icon": "building-2", "rarity": "common" },
+    { "id": "skills_explorer", "name": "Skills Explorer", "description": "Check out my technical stack.", "icon": "laptop", "rarity": "common" },
+    { "id": "education_buff", "name": "Education Buff", "description": "Discover my academic background.", "icon": "graduation-cap", "rarity": "common" },
+    { "id": "contact_me", "name": "Reached Out", "description": "Click the contact button.", "icon": "mail", "rarity": "common" },
+    { "id": "project_enthusiast", "name": "Project Enthusiast", "description": "Open all 3 projects.", "icon": "rocket", "rarity": "rare" },
+    { "id": "scroll_master", "name": "Scroll Master", "description": "Scroll all the way to the bottom.", "icon": "scroll", "rarity": "rare" },
+    { "id": "time_keeper", "name": "Time Keeper", "description": "Spend 5+ minutes exploring the site.", "icon": "clock", "rarity": "rare" },
+    { "id": "cv_downloader", "name": "Potential Recruiter", "description": "Download the resume.", "icon": "file-text", "rarity": "rare" },
+    { "id": "social_networker", "name": "Social Butterfly", "description": "Visit 2 different social links.", "icon": "share-2", "rarity": "rare" },
+    { "id": "completionist", "name": "Completionist", "description": "Visit every main section of the site.", "icon": "trophy", "rarity": "epic" },
+    { "id": "master_explorer", "name": "Master Explorer", "description": "Unlock every other trophy.", "icon": "crown", "rarity": "legendary" }
+  ],
+
+  "INITIAL_NOTIFICATIONS": [
+    { "id": "welcome", "title": "Welcome!", "message": "Thanks for stopping by — take a look around.", "time": "just now", "icon": "wave" },
+    { "id": "now-shipping", "title": "Now shipping", "message": "OCTAVE just hit its 98th release.", "time": "2h ago", "icon": "rocket" }
+  ]
+}

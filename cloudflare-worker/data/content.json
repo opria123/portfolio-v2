@@ -1,0 +1,119 @@
+{
+  "PROFILE": {
+    "name": "Joshua Opria",
+    "title": "Full-Stack & AI/ML Engineer",
+    "summary": "Senior Software Engineer focused on AI/ML systems, distributed architectures, and open-source. arXiv author (STRUM) and maintainer of Octave.",
+    "anecdotes": [
+      "I've always had a passion for video games and originally wanted to develop them, which led me to discover a love for technology in general.",
+      "My journey through school and past roles has taken me from game prototypes to building distributed AI systems and mentoring engineers.",
+      "I'm a lifelong gamer, a drummer, and a car enthusiast."
+    ],
+    "email": "opriaj@gmail.com"
+  },
+
+  "PROJECTS": [
+    {
+      "title": "STRUM",
+      "description": "Audio-to-Chart ML Pipeline: Converts raw audio into playable rhythm game charts using deep learning.",
+      "category": "ai-ml",
+      "technologies": ["Python", "PyTorch", "Hugging Face"],
+      "status": "completed"
+    },
+    {
+      "title": "OCTAVE",
+      "description": "Desktop Chart Editor & Auto-Charter: One-click audio to chart workflow, cross-platform app.",
+      "category": "apps-tools",
+      "technologies": ["Electron", "React", "TypeScript", "Python"],
+      "status": "in-progress"
+    },
+    {
+      "title": "YARG Online Multiplayer",
+      "description": "Networking layer for an open-source rhythm game. First online multiplayer for YARG.",
+      "category": "open-source",
+      "technologies": ["C#", ".NET", "Unity", "Docker"],
+      "status": "in-progress"
+    },
+    {
+      "title": "Turtle Recognition",
+      "description": "Computer Vision for the Toledo Zoo: Turtle identification system using CNNs.",
+      "category": "ai-ml",
+      "technologies": ["Python", "PyTorch", "Computer Vision"],
+      "status": "completed"
+    },
+    {
+      "title": "2D Action Platformer",
+      "description": "Unreal Engine 5 prototype: Side-scrolling action platformer with custom movement and AI.",
+      "category": "apps-tools",
+      "technologies": ["Unreal Engine 5", "C++", "Blueprints"],
+      "status": "completed"
+    },
+    {
+      "title": "Bot-Cleaner",
+      "description": "Discord moderation bot: Detects and removes spam/bot accounts from servers.",
+      "category": "apps-tools",
+      "technologies": ["Node.js", "JavaScript"],
+      "status": "completed"
+    }
+  ],
+
+  "EXPERIENCES": [
+    {
+      "jobTitle": "Software Engineer II",
+      "company": "CoverMyMeds",
+      "period": "May 2022 – Present",
+      "description": "Architecting LLM-powered document intelligence pipelines and distributed event-driven systems. Leading engineers and shaping the architectural direction of internal AI systems.",
+      "skills": ["Python", "Elixir", "Node.js", "React", "Azure", "Kafka", "LLMs", "Distributed Systems"]
+    },
+    {
+      "jobTitle": "Technical Lead",
+      "company": "Nationwide Insurance",
+      "period": "Dec 2020 – May 2022",
+      "description": "Led API architecture and team development across multiple data domains, partnering directly with business stakeholders.",
+      "skills": ["AWS AppSync", "GraphQL", "Java", "Spring Boot", "AWS", "API Design", "Distributed Systems"]
+    },
+    {
+      "jobTitle": "Senior Software Engineer",
+      "company": "Nationwide Insurance",
+      "period": "Mar 2020 – Dec 2020",
+      "description": "Owned high-throughput API delivery and CI/CD pipeline design.",
+      "skills": ["Angular", "AWS S3", "Spring Boot", "Java", "Node.js", "CI/CD"]
+    },
+    {
+      "jobTitle": "Software Engineer",
+      "company": "Nationwide Insurance",
+      "period": "Jun 2019 – Mar 2020",
+      "description": "Built internal developer tooling for API governance.",
+      "skills": ["Java", "Angular", "Docker", "Kubernetes", "Node.js", "CI/CD"]
+    },
+    {
+      "jobTitle": "Software Developer Contractor",
+      "company": "Nationwide Insurance",
+      "period": "Dec 2018 – Jun 2019",
+      "description": "Built developer-facing tooling and authentication infrastructure.",
+      "skills": ["Angular", "Java", "Spring Boot", "Docker", "Kubernetes", "AWS", "API Design", "CI/CD"]
+    },
+    {
+      "jobTitle": "Software Developer",
+      "company": "Scenicio",
+      "period": "Aug 2018 – Dec 2018",
+      "description": "Built an AR mobile app integrating real-world data from government APIs.",
+      "skills": ["Android", "iOS", "AR", "Kotlin", "JavaScript"]
+    },
+    {
+      "jobTitle": "Software Developer Intern",
+      "company": "Nationwide Insurance",
+      "period": "Jun 2018 – Aug 2018",
+      "description": "First exposure to production cloud infrastructure.",
+      "skills": ["Java", "Spring Boot", "Docker", "Kubernetes", "AWS", "CI/CD"]
+    }
+  ],
+
+  "SKILLS": {
+    "programmingLanguages": ["Python", "TypeScript", "Java", "Elixir", "C#", "C++", "SQL", "Ruby"],
+    "frameworksEngines": ["PyTorch", "Hugging Face", "React", "Node.js", "Spring Boot", "Electron", "Three.js", "Kafka", "Docker", "Kubernetes", "Terraform", "AWS", "Azure", "TensorFlow", "LangChain", "Unreal Engine", "ML-Agents"],
+    "specialties": ["LLM Pipelines", "Document Intelligence", "RAG", "Event-Driven Architecture", "Distributed Systems", "API Design", "System Design", "CI/CD", "Evaluation & A/B Testing", "Cloud Infrastructure", "Desktop Apps", "Real-Time Systems", "OpenUSD", "Physical Simulation", "Omniverse", "Computer Vision", "NLP", "Deep Learning", "Reinforcement Learning", "Fine-tuning", "Game Dev", "MCP", "Agents", "GPU Computing"],
+    "softSkills": ["Technical Leadership", "Mentorship", "System Design", "Communication", "Problem Solving", "Continuous Learning", "Teamwork", "Ownership"]
+  },
+
+  "EDUCATION_FILE": "education.json"
+}

@@ -1,0 +1,17 @@
+.term-cyan {
+  color: #00ffff;
+  font-weight: bold;
+}
+.term-yellow {
+  color: #ffdf00;
+  font-weight: 500;
+}
+.term-green {
+  color: #39ff14;
+}
+.term-red {
+  color: #ff5555;
+}
+.term-bold {
+  font-weight: bold;
+}

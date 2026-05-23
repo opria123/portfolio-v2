@@ -1,0 +1,114 @@
+[
+  {
+    "type": "degree",
+    "title": "M.Sc. Computer Science — Artificial Intelligence & Machine Learning",
+    "institution": "Western Governors University (WGU)",
+    "period": "Oct 2025",
+    "description": "Graduate program focused on machine learning, deep learning, and applied AI systems."
+  },
+  {
+    "type": "degree",
+    "title": "B.Sc. Computer Science",
+    "institution": "Bowling Green State University",
+    "period": "Aug 2017 – May 2019",
+    "description": "Undergraduate degree in computer science — foundations across systems, algorithms, and software engineering."
+  },
+  {
+    "type": "certificate",
+    "title": "AWS Certified Machine Learning — Specialty",
+    "institution": "Amazon Web Services",
+    "period": "Sep 2025",
+    "description": "Industry certification in designing, building, and deploying ML solutions on AWS."
+  },
+  {
+    "type": "certificate",
+    "title": "Fundamentals of Accelerated Computing with Modern CUDA C++",
+    "institution": "NVIDIA",
+    "period": "Mar 2025",
+    "description": "GPU programming and accelerated computing with modern CUDA C++."
+  },
+  {
+    "type": "certificate",
+    "title": "Azure AI Fundamentals",
+    "institution": "Microsoft",
+    "period": "Mar 2024",
+    "description": "Foundational certification covering AI workloads and services on Microsoft Azure."
+  },
+  {
+    "type": "certificate",
+    "title": "OpenUSD Crash Course — Build 3D Data Pipelines for Physical AI",
+    "institution": "NVIDIA",
+    "period": "2025",
+    "description": "OpenUSD scene graphs, layering, and data pipelines for Physical AI and Omniverse workflows."
+  },
+  {
+    "type": "certificate",
+    "title": "MCP Course Unit 3 — Automation in Production",
+    "institution": "Hugging Face",
+    "period": "2025",
+    "description": "Model Context Protocol fundamentals and production automation patterns for AI agents."
+  },
+  {
+    "type": "certificate",
+    "title": "Make a 2D Action Platformer in Unreal Engine 5",
+    "institution": "Udemy",
+    "period": "2024",
+    "description": "Gameplay programming and engine workflows in Unreal Engine 5."
+  },
+  {
+    "type": "certificate",
+    "title": "AI Agents Course",
+    "institution": "Hugging Face",
+    "period": "2025",
+    "description": "End-to-end course on building production AI agents: tool use, planning, multi-step reasoning, and orchestration."
+  },
+  {
+    "type": "certificate",
+    "title": "LLM Course",
+    "institution": "Hugging Face",
+    "period": "2025",
+    "description": "Transformer architectures, fine-tuning, evaluation, and deployment of large language models with the Hugging Face ecosystem."
+  },
+  {
+    "type": "certificate",
+    "title": "NLP Course",
+    "institution": "Hugging Face",
+    "period": "2024",
+    "description": "Natural language processing with Transformers — tokenization, fine-tuning, datasets, and the full HF pipeline."
+  },
+  {
+    "type": "certificate",
+    "title": "Deep Reinforcement Learning Course",
+    "institution": "Hugging Face",
+    "period": "2024",
+    "description": "Theory and practice of deep RL — policy gradients, PPO, SAC, and training agents in classic and procedurally generated environments."
+  },
+  {
+    "type": "certificate",
+    "title": "ML for Games Course",
+    "institution": "Hugging Face",
+    "period": "2024",
+    "description": "Applying machine learning and RL inside Unity ML-Agents to ship intelligent behaviors in games."
+  },
+  {
+    "type": "certificate",
+    "title": "Audio Course",
+    "institution": "Hugging Face",
+    "period": "2024",
+    "description": "Audio ML fundamentals — ASR, TTS, audio classification, and Whisper-based pipelines."
+  },
+  {
+    "type": "certificate",
+    "title": "Computer Vision Course",
+    "institution": "Hugging Face",
+    "period": "2024",
+    "description": "Modern computer vision with vision transformers, detection, segmentation, and multimodal pipelines."
+  },
+  {
+    "type": "certificate",
+    "title": "LangChain for LLM Application Development",
+    "institution": "Udemy",
+    "period": "2024",
+    "description": "Building production LLM applications with LangChain — prompts, chains, memory, retrieval, and agents."
+  }
+]
